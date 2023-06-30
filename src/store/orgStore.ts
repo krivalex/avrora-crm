@@ -3,9 +3,9 @@
 import { defineStore } from 'pinia'
 import { IOrg } from '@/types/types'
 
-export const useTableStore = defineStore('tableStore', {
+export const useOrgStore = defineStore('tableStore', {
   state: (): IOrg => ({
-    org: {},
+    org: [],
   }),
   getters: {
     getOrg(): object {
@@ -13,7 +13,7 @@ export const useTableStore = defineStore('tableStore', {
     },
   },
   actions: {
-    setOrg(org: object): void {
+    setOrg(org: []): void {
       this.org = org
     },
   },

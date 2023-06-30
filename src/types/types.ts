@@ -1,5 +1,5 @@
 export interface IOrg {
-  org: object
+  org: Array<IItem>
 }
 
 export interface IItemStore {
@@ -11,6 +11,6 @@ export interface IItem {
   title: string
   abscractCount: number
   factCount: number
-  parent_id: number
+  parent_id: number | null
   children: IItem[]
 }

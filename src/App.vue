@@ -1,18 +1,22 @@
 <template>
   <section id="main">
-    <h1>Working...</h1>
+    <HomePage />
   </section>
 </template>
 
 <script lang="ts">
+import HomePage from '@/views/HomePage.vue';
+
+
 export default {
   name: 'App',
-  components: {},
+  components: {
+    HomePage,
+  },
   data() {
     return {};
   },
   methods: {},
-  mounted() { },
 };
 </script>
 
