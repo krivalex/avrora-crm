@@ -1,7 +1,7 @@
 import { defineStore } from 'pinia'
 
-import { IItem } from '@/types'
-import { IItemStore } from '@/types'
+import { IItem } from '@/types/types'
+import { IItemStore } from '@/types/types'
 
 export const useItemStore = defineStore('itemStore', {
   state: (): IItemStore => ({

@@ -6,13 +6,13 @@
 </template>
 
 <script lang="ts">
-import { IItem } from '@/types'
+import { IItem } from '@/types/types'
 
 export default {
   name: 'OneItem',
   props: {
     item: {
-      type: Object as () => Item,
+      type: IItem,
       required: true
     }
   }

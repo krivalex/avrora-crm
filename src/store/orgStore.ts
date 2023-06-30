@@ -1,7 +1,7 @@
 // create pinia store
 
 import { defineStore } from 'pinia'
-import { IOrg } from '@/types'
+import { IOrg } from '@/types/types'
 
 export const useTableStore = defineStore('tableStore', {
   state: (): IOrg => ({
