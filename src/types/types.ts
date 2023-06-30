@@ -21,8 +21,6 @@ export class IItem {
     this.factCount = factCount
     this.parent_id = parent_id
     this.children = children
-    this.abstractFullCount = this.abstractFullCount.bind(this)
-    this.factFullCount = this.factFullCount.bind(this)
   }
 
   public abstractFullCount(): number {

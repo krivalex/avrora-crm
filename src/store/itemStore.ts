@@ -12,8 +12,8 @@ export const useItemStore = defineStore('itemStore', {
       factCount: 0,
       parent_id: 0,
       children: [],
-      abstractFullCount: () => 0,
-      factFullCount: () => 0,
+      abstractFullCount: this.item.abstractFullCount(),
+      factFullCount: this.item.factFullCount(),
     },
   }),
   getters: {

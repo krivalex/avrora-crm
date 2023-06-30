@@ -2,8 +2,8 @@
   <details class="item">
     <summary>
       <h1>{{ item.title }}</h1>
-      <p>{{ item.abscractCount }}</p>
-      <p>{{ item.factCount }}</p>
+      <p>{{ item.abstractFullCount }}</p>
+      <p>{{ item.factFullCount }}</p>
     </summary>
     <div v-for="children in item.children">
       <OneItem :key="children.id" :item="children" />

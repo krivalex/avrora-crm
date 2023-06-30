@@ -8,6 +8,8 @@ const org: IOrg = {
       abscractCount: 0,
       factCount: 0,
       parent_id: null,
+      abstractFullCount: this.abstractFullCount(this),
+      factFullCount: this.factFullCount(this),
       children: [
         {
           id: 11,
@@ -15,6 +17,8 @@ const org: IOrg = {
           abscractCount: 0,
           factCount: 0,
           parent_id: 1,
+          abstractFullCount: this.abstractFullCount.bind(this),
+          factFullCount: this.factFullCount.bind(this),
           children: [
             {
               id: 111,
@@ -23,8 +27,8 @@ const org: IOrg = {
               factCount: 10,
               parent_id: 11,
               children: [],
-              abstractFullCount: 0,
-              factFullCount: 0,
+              abstractFullCount: this.abstractFullCount.bind(this),
+              factFullCount: this.factFullCount.bind(this),
             },
             {
               id: 112,
@@ -33,8 +37,8 @@ const org: IOrg = {
               factCount: 10,
               parent_id: 11,
               children: [],
-              abstractFullCount: 0,
-              factFullCount: 0,
+              abstractFullCount: this.abstractFullCount.bind(this),
+              factFullCount: this.factFullCount.bind(this),
             },
           ],
         },
