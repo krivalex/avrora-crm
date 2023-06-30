@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import FullTable from '@/components/FullTable.vue';
-// import { useOrgStore } from '@/store/orgStore';
+import { useOrgStore } from '@/store/orgStore';
 import full_org from '@/test';
 
 export default {
@@ -14,10 +14,12 @@ export default {
   components: {
     FullTable
   },
+  mounted() {
+    const store = useOrgStore();
+    store.setOrg(full_org.org);
+  },
   computed: {
     org() {
-      // const orgStore = useOrgStore();
-      // return orgStore.org;
       return full_org;
     }
   }

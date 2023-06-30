@@ -33,12 +33,21 @@ export default {
 
 <style lang="scss" scoped>
 .item {
-  width: 100%;
+  max-width: calc(100vw - 30px);
   border: 1px solid black;
-  margin: 10px;
-  padding: 10px;
+  margin: 10px 0px 0px 30px;
   border-radius: 10px;
   background-color: #f0f0f0;
   height: 60px;
+
+  summary {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    height: 60px;
+    padding: 10px;
+  }
 }
 </style>

@@ -13,8 +13,8 @@ export const useOrgStore = defineStore('tableStore', {
     },
   },
   actions: {
-    setOrg(org: []): void {
-      this.org = org
+    setOrg(new_org: {}): void {
+      this.org = new_org
     },
   },
 })
