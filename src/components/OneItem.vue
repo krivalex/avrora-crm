@@ -5,7 +5,7 @@
       <p>{{ item.abscractCount }}</p>
       <p>{{ item.factCount }}</p>
     </summary>
-    <div v-for="children in item.children">
+    <div class="embedded-item" v-for="children in item.children">
       <OneItem :key="children.id" :item="children" />
     </div>
   </details>
@@ -37,7 +37,7 @@ export default {
   margin: 10px 0px 0px 30px;
   border-radius: 10px;
   background-color: #f0f0f0;
-  height: 60px;
+  position: relative;
 
   summary {
     display: flex;
@@ -48,5 +48,6 @@ export default {
     height: 60px;
     padding: 10px;
   }
+
 }
 </style>
