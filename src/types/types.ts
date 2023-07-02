@@ -13,31 +13,32 @@ export class IItem {
   public factCount: number
   public parent_id: number | null
   public children: IItem[]
-  public abstractFullCountNumber: number
-  public factFullCountNumber: number
 
-  constructor(id: number, title: string, abscractCount: number, factCount: number, parent_id: number | null, children: IItem[], abstractFullCount: () => number, factFullCount: () => number) {
+  constructor(id: number, title: string, abscractCount: number, factCount: number, parent_id: number | null, children: IItem[]) {
     this.id = id
     this.title = title
-    this.abscractCount = abscractCount
-    this.factCount = factCount
     this.parent_id = parent_id
     this.children = children
-    this.abstractFullCountNumber = abstractFullCount()
-    this.factFullCountNumber = factFullCount()
+
+    this.abscractCount = abscractCount === 0 ? this.abstractFullCount() : abscractCount
+    this.factCount = factCount === 0 ? this.factFullCount() : factCount
   }
 
   public abstractFullCount(): number {
-    this.children.forEach((item: IItem) => {
-      this.abstractFullCountNumber += item.abscractCount
+    let count = 0
+    this.children.forEach((item) => {
+      count += item.abscractCount
+      console.log(item)
     })
-    return this.abstractFullCountNumber
+    return count
   }
 
   public factFullCount(): number {
-    this.children.forEach((item: IItem) => {
-      this.factFullCountNumber += item.factCount
+    let count = 0
+    this.children.forEach((item) => {
+      count += item.factCount
+      console.log(item)
     })
-    return this.factFullCountNumber
+    return count
   }
 }
